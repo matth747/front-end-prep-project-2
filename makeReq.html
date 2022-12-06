@@ -4,18 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <title>It Takes a Village</title>
 </head>
 <body>
-  <header class="jumbotron jumbotron-fluid">
+  <header class="jumbotron jumbotron-fluid bg-info">
     <div class="container">
         <section class="row ml-3">
             <h1>It Takes a Village</h1>
         </section>
     </div>
 </header>
+<ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" href="./form.html">Login</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./reqList.html">Fulfill Requests</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="./makeReq.html">Make a Request</a>
+    </li>
+</ul>
         <!-- Center vertically by setting width equal to page width and make it flexbox -->
         <!-- Center horizontally by setting height equal to page height -->
         <div class="min-vh-50 d-flex align-items-center">
@@ -23,29 +37,33 @@
           <section class="w-100 row justify-content-center">
       
             <div class="col-10 col-md-6 col-lg-5">
-              <!-- Bootstrap preset color classes for backgrounds and text -->
-              <h1 class="display-4 text-center ">Make a Request to the Village!</h1>
-              <!-- Use p - for classes that set padding -->
-              <!-- Use m - for classes that set margin -->
+
+              <h1 class="display-3 text-center ">Make a Request!</h1>
+
               <form class="bg-white my-4 p-4 rounded card">
 
 
                 <div class="form-group">
                   <label for="title">What are you in need of?</label>
                   <input type="text" id="title" class="form-control" placeholder="Title" required />
-<!--              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+
                 </div>
-      
+                <br>
                 <div class="form-group">
                   <label for="description">Please give a brief description</label>
                   <input type="text" id="description" class="form-control" placeholder="Description" required />
                 </div>
                 <br>
 
-      
+                <div class="form-group">
+                    <label for="date">When do you need it by?</label>
+                    <input type="text" id="datepicker" class="form-control" placeholder="Date Desired By" required />
+                    <!--date can NOT be null in its current state-->
+                  </div>
 
-      
-                <button class="btn btn-block btn-success">Complete Signup!</button>
+
+                <br>
+                <button class="btn btn-block btn-success" id="button">Complete Request!</button>
               </form>
             </div>
           </section>
@@ -56,7 +74,7 @@
         <section class="row justify-content-center">
           <div class="col-12 col-sm-6 col-md-4">
               <address>
-                  <h2>Contributers</h2>
+                  <h3>Contributers</h3>
                   
                   <h5>
                       Benjamin Wolf
@@ -77,7 +95,7 @@
           </div>
       
           <div class="col-12 col-sm-6 col-md-4">
-              <h2>Contact Us</h2>
+              <h3>Contact Us</h3>
               <h5>Email: </h5>
               <br>
               <h5>
@@ -89,4 +107,5 @@
       </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./js/makeReq.js"></script>
 </html>

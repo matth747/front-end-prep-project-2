@@ -1,3 +1,9 @@
 .card {
-    min-height: 300px;
+    min-height: 250px;
 }
+
+.nav-link {
+    color: black;
+    border: 1px, solid, black;
+}
+
